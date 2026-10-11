@@ -1,0 +1,78 @@
+# ==============================================================================
+# Gitignore per AE-XAD BUSI Breast Ultrasound Anomaly Detection
+# ==============================================================================
+
+# --- Ambienti virtuali & Dipendenze ---
+venv/
+.venv/
+env/
+ENV/
+pyvenv.cfg
+
+# --- Cache Python & Jupyter ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- File pesanti & Checkpoint modelli (evita blocco Git LFS / GitHub limit) ---
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.onnx
+*.npy
+*.pdf
+
+# --- Dataset (raw e processati) ---
+busi_raw/
+busi_prepared/
+Dataset_BUSI_with_GT/
+npy/
+_npy_*/
+busi_seed*/
+train/
+test/
+
+# --- Cartelle di esecuzione esperimenti locali pesanti (>35GB) ---
+run_*/
+runs_*/
+conv_*/
+runs/
+
+# --- Backup e cartelle sorgenti grezze di lavoro ---
+tutti i nb/
+notebookTesi.ipynb
+notebookTesi_*.ipynb
+notebookTesi*.ipynb
+
+# --- File temporanei, note e metadati personali ---
+resumeperdomani.txt
+CLAUDE.md
+GUIDA_POST_PROCESSING.md
+REPORT_METRICHE.md
+info.txt
+results.json
+results.csv
+split_info.json
+convergence_results.json
+report_figures/
+*.png
+!assets/*.png
+
+# --- Configurazioni IDE / Editor ---
+.obsidian/
+.claude/
+app.json
+appearance.json
+core-plugins.json
+settings.local.json
+workspace.json
+.vscode/
+.idea/
+
+# --- OS e file di sistema ---
+.DS_Store
+Thumbs.db
+desktop.ini
